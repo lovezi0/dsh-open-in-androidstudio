@@ -1,0 +1,8 @@
+# insert.name 必须是【包名】（dsh plugin add 后由 profile 的 node_modules 解析到 lib/index.js）；
+# insert.id 与入口导出的 cordis name（'open-in-androidstudio'）保持一致。
+#
+# 不代插底座 dsh-open-in-app-base：实测携带式安装会导致 desktop 侧无法卸载底座。
+# 底座改为显式安装的前置依赖（见 README）；它缺席时本插件静默无目标，不影响宿主启动。
+- insert:
+    - id: open-in-androidstudio
+      name: 'dsh-open-in-androidstudio'
